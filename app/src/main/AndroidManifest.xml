@@ -13,6 +13,13 @@
         android:theme="@style/Theme.MyApplicationKEEPY"
         tools:targetApi="31">
         <activity
+            android:name=".registerKeeperActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".homePageCustomer"
             android:exported="false">
             <meta-data

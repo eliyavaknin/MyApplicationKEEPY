@@ -17,16 +17,32 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-      Button button= findViewById(R.id.registerActivityButton);
+      Button button= findViewById(R.id.loginActivityButton);
       button.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View view) {
-            openRegisterActivity2();
+            openhomepage();
           }
-      });
 
+      });
+      findViewById(R.id.registercostumer).setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View view) {opencostumerRegisterActivity();}
+      }); ;
+      findViewById(R.id.registerkeeper).setOnClickListener(new View.OnClickListener(){
+          @Override
+          public void onClick(View view) {openkeeperRegisterActivity();}
+      });
     }
-    public void openRegisterActivity2(){
+    public void openhomepage(){
+        Intent Intent =new Intent(MainActivity.this,homePageCustomer.class);
+        startActivity(Intent);
+    }
+    public void openkeeperRegisterActivity(){
+        Intent Intent =new Intent(MainActivity.this,registerKeeperActivity.class);
+        startActivity(Intent);
+    }
+    public void opencostumerRegisterActivity(){
         Intent Intent =new Intent(MainActivity.this,RegisterActivity2.class);
         startActivity(Intent);
     }
