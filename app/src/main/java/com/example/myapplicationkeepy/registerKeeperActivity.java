@@ -2,29 +2,30 @@ package com.example.myapplicationkeepy;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class RegisterActivity2 extends AppCompatActivity {
+public class registerKeeperActivity extends AppCompatActivity {
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register2);
+        setContentView(R.layout.activity_register_keeper);
 
-        Button button= findViewById(R.id.singupbtn);
-        button.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.continuekeeper).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openRegisterActivity2();
+                openhomepagekeeper();
             }
         });
 
     }
-    public void openRegisterActivity2(){
-        Intent Intent =new Intent(RegisterActivity2.this,homePageCustomer.class);
+    public void openhomepagekeeper(){
+        Intent Intent =new Intent(registerKeeperActivity.this,homePageKeeper.class);
         startActivity(Intent);
     }
 }
